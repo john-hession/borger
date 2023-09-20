@@ -11,7 +11,7 @@ intents:
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Hi, I'm Sam at Burg-Hain, how can I help you today?"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -32,3 +32,31 @@ responses:
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
+entities:
+  -size
+  -table
+  -time
+  -name
+  -date
+
+slots:
+  time:
+    type: text
+    auto_fill: false
+  table:
+    type: text
+    auto_fill: false
+  size:
+    type: float
+    initial_value: 1
+
+forms:
+  reserve_form:
+    required_slots:
+      -size
+      -time
+      -date
+      -table
+    
+

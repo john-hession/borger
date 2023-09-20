@@ -11,3 +11,11 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Table Book
+  steps:
+    - intent: reservation_init
+    - action: reserve_form
+    - active_loop: reserve_form
+
+  
