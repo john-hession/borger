@@ -1,0 +1,134 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: reservation_init
+  examples: |
+    - Hello, I would like to book a table at [Burg-Hain](name)
+    - Hi, I would like to book a table at [Burghain](name)
+    - Book a table at [Burgain](name)
+    - Can you book a table at [Burg-hain](name)
+    - I would like to make a reservation at [Berghain](name)
+    - Make a reservation at [Burg-Hain](name)
+    - Book a table
+    - I'd like to book a table
+    - Make a reservation
+    - I want to eat at [Berg-Hain](name) on [6pm](time)
+    - Make a reservation at [Burger](name) for [6:30pm](time)
+    - Reserve a table at [Burg-Hain](name) on [7](time)
+    - [Burghein](name) reservation on [20:00](time)
+    - [Burg-Hain](name) reservation
+
+- intent: table_size
+  examples: |
+    - [2](size)
+    - table for [3 people](size)
+    - [4](size) people 
+    - for [6](size)
+    - is there availability for [1](size)
+    - do you have a table for [2](size)
+    - I would like a table for [3](size)
+
+- intent: table_type
+  examples: |
+    - I would like a [window](type) table
+    - [indoor](type)
+    - [outdoor](type)
+    - Maybe a [bar](type) table?
+    - Is there a [window](type) table? 
+
+- intent: table_time
+  examples: |
+    - [6:30](time)
+    - at [19:00](time) 
+    - does [12 pm](time) work?         
+
+# entity: time, size, type, name
