@@ -129,6 +129,11 @@ nlu:
   examples: |
     - [6:30](time)
     - at [19:00](time) 
-    - does [12 pm](time) work?         
+    - does [12 pm](time) work?
+    - the [20th of november](date)
+    - [4/2/23](date)
+    - does the [6th](date) work?
+    - how is [next Monday](date)?
+    - The [31st](date) please
 
 # entity: time, size, type, name
