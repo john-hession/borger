@@ -36,6 +36,12 @@ responses:
   utter_size:
   - text: "How many people do want to reserve for?"
 
+  utter_time:
+  - text: "When do you want your reservation?"
+
+  utter_type: 
+  - text: "What type of table do you want?"
+
   utter_
 
 session_config:
@@ -53,12 +59,19 @@ slots:
   time:
     type: text
     auto_fill: false
+    mappings:
+      - type: from_entity
+        entity: time
   table:
     type: text
     auto_fill: false
+      - type: from_entity
+        entity: table
   size:
     type: float
     initial_value: 1
+      - type: from_entity
+        entity: size
 
 forms:
   reserve_form:

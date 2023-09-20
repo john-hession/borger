@@ -90,7 +90,6 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
 
-# this is unnecessary
 - intent: reservation_init
   examples: |
     - Hello, I would like to book a table at [Burg-Hain](name)
