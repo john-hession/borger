@@ -8,6 +8,10 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - table_size
+  - table_type
+  - table_time
+  - reservation_init
 
 responses:
   utter_greet:
@@ -28,6 +32,11 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  utter_size:
+  - text: "How many people do want to reserve for?"
+
+  utter_
 
 session_config:
   session_expiration_time: 60
