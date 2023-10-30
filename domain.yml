@@ -56,6 +56,11 @@ entities:
   -date
 
 slots:
+  name:
+    type: text
+    auto_fill: false
+    - type: from_entity
+        entity: name
   time:
     type: text
     auto_fill: false
