@@ -1,6 +1,20 @@
 version: "3.1"
 
 stories:
+- story: make reservation 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: reservation_init
+  - action: utter_ask_name
+  - intent: table_size 
+  - action: utter_size
+  - intent: table_type
+  - action: utter_type
+  - intent: table_time
+  - action: utter_time
+  - intent: goodbye
+  - action: utter_goodbye
 
 - story: happy path
   steps:

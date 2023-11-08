@@ -107,6 +107,16 @@ nlu:
     - [Burghein](name) reservation on [20:00](time)
     - [Burg-Hain](name) reservation
 
+- intent: give_name
+  examples: |
+    - [Bob](name)
+    - My name is [Mary](name)
+    - Booking for [Sam](name)
+    - I am [Ayush](name)
+    - [George](name) is my name
+    - The booking is for [Jake](name)
+    - Booking for [Quigs](name)
+
 - intent: table_size
   examples: |
     - [2](size)

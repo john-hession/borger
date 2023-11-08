@@ -37,7 +37,7 @@ class ActionBookAppointment(Action):
         sql = "INSERT INTO reservations (date, time_start, time_end, table_id, reserved_under, nr_guests) VALUES (?, ?, ?, ?, ?, ?);"
 
         cursor.execute(sql,('bla', 'bla', 'bla', '1', tracker.get_slot('name'), tracker.get_slot('size')))
-# some sql stuff here we can write later
+        
         conn.commit()
         conn.close()
         return[]
