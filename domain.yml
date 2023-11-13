@@ -11,12 +11,18 @@ intents:
   - table_size
   - table_type
   - table_time
+  - name_guest
   - reservation_init
 
 responses:
   utter_greet:
   - text: "Hi, I'm Sam at Burg-Hain, would you like to make a reservation right now?"
 
+  utter_success:
+  - text: "Perfect! Your table has been reserved"
+
+  utter_failure:
+  - text: "Unfortunately we do not have this table available. Would you like to try searching for something different?"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -52,10 +58,10 @@ session_config:
 
 entities:
   -size
-  -table
   -time
   -name
   -date
+  -tabletype
 
 slots:
   name:
@@ -69,16 +75,22 @@ slots:
     mappings:
       - type: from_entity
         entity: time
-  table:
+  date:
     type: text
     auto_fill: false
+    mappings:
       - type: from_entity
-        entity: table
+        entity: date      
   size:
     type: float
     initial_value: 1
       - type: from_entity
         entity: size
+  tabletype:
+    type: text
+    auto_fill: false
+    - type: from_entity
+        entity: tabletype
 
 forms:
   reserve_form:
@@ -87,6 +99,6 @@ forms:
       -size
       -time
       -date
-      -table
+      -tabletype
     
 

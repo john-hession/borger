@@ -16,6 +16,23 @@ stories:
   - intent: goodbye
   - action: utter_goodbye
 
+- story: make reservation better
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: reservation_init
+  - action: utter_ask_name
+  - intent: name_guest
+  - action: utter_size
+  - intent: table_size
+  - action: utter_type
+  - intent: table_type
+  - action: utter_time
+  - intent: table_time
+  - action: utter_success
+  - intent: goodbye
+  - action: utter_goodbye
+
 - story: happy path
   steps:
   - intent: greet

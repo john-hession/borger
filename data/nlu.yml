@@ -107,7 +107,7 @@ nlu:
     - [Burghein](name) reservation on [20:00](time)
     - [Burg-Hain](name) reservation
 
-- intent: give_name
+- intent: name_guest
   examples: |
     - [Bob](name)
     - My name is [Mary](name)
@@ -129,12 +129,12 @@ nlu:
 
 - intent: table_type
   examples: |
-    - I would like a [window](table) table
-    - [indoor](table)
-    - [outdoor](table)
-    - Maybe a [bar](table) seat?
-    - Is there a [window](table) table? 
-    - Is there a [corner](table) table available?
+    - I would like a [window](tabletype) table
+    - [indoor](tabletype)
+    - [outdoor](tabletype)
+    - Maybe a [bar](tabletype) seat?
+    - Is there a [window](tabletype) table? 
+    - Is there a [corner](tabletype) table available?
 
 - intent: table_time
   examples: |
@@ -147,4 +147,4 @@ nlu:
     - how is [next Monday](date)?
     - The [31st](date) please
 
-# entity: time, size, type, name
+# entity: time, date, size, tabletype, name
