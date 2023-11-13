@@ -15,7 +15,8 @@ intents:
 
 responses:
   utter_greet:
-  - text: "Hi, I'm Sam at Burg-Hain, how can I help you today?"
+  - text: "Hi, I'm Sam at Burg-Hain, would you like to make a reservation right now?"
+
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -24,11 +25,14 @@ responses:
   utter_did_that_help:
   - text: "Did that help you?"
 
+  utter_ask_name:
+  - text: "Can I get a name for the reservation?"
+
   utter_happy:
   - text: "Great, carry on!"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "Goodbye, thanks for calling Burg-hain"
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
@@ -42,8 +46,6 @@ responses:
   utter_type: 
   - text: "What type of table do you want?"
 
-  utter_
-
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
@@ -56,6 +58,11 @@ entities:
   -date
 
 slots:
+  name:
+    type: text
+    auto_fill: false
+    - type: from_entity
+        entity: name
   time:
     type: text
     auto_fill: false
@@ -76,6 +83,7 @@ slots:
 forms:
   reserve_form:
     required_slots:
+      -name
       -size
       -time
       -date
