@@ -12,6 +12,7 @@ rules:
   steps:
   - intent: greet
   - action: utter_greet
+
 - rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: goodbye
@@ -28,4 +29,15 @@ rules:
     - action: reserve_form
     - active_loop: reserve_form
 
-  
+- rule: Submit form
+  condition:
+  # Condition that form is active.
+  - active_loop: reserve_form
+  steps:
+  # Form is deactivated
+  - action: reserve_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  # The actions we want to run when the form is submitted.
+  - action: utter_success

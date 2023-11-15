@@ -1,103 +1,86 @@
-version: "3.1"
-
+version: '3.1'
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - table_size
-  - table_type
-  - table_time
-  - name_guest
-  - reservation_init
-
+- affirm
+- bot_challenge
+- deny
+- goodbye
+- greet
+- mood_great
+- mood_unhappy
+- name_guest
+- reservation_init
+- table_size
+- table_time
+- table_type
 responses:
   utter_greet:
-  - text: "Hi, I'm Sam at Burg-Hain, would you like to make a reservation right now?"
-
+  - text: Hi, I'm Sam at Burg-Hain, would you like to make a reservation right now?
   utter_success:
-  - text: "Perfect! Your table has been reserved"
-
+  - text: Perfect! Your table has been reserved
   utter_failure:
-  - text: "Unfortunately we do not have this table available. Would you like to try searching for something different?"
-
+  - text: Unfortunately we do not have this table available. Would you like to try searching for something different?
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
   utter_did_that_help:
-  - text: "Did that help you?"
-
+  - text: Did that help you?
   utter_ask_name:
-  - text: "Can I get a name for the reservation?"
-
+  - text: Can I get a name for the reservation?
   utter_happy:
-  - text: "Great, carry on!"
-
+  - text: Great, carry on!
   utter_goodbye:
-  - text: "Goodbye, thanks for calling Burg-hain"
-
+  - text: Goodbye, thanks for calling Burg-hain
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
+  - text: I am a bot, powered by Rasa.
   utter_size:
-  - text: "How many people do want to reserve for?"
-
+  - text: How many people do want to reserve for?
   utter_time:
-  - text: "When do you want your reservation?"
-
-  utter_type: 
-  - text: "What type of table do you want?"
-
+  - text: When do you want your reservation?
+  utter_type:
+  - text: What type of table do you want?
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
-
 entities:
-  - size
-  - time
-  - name
-  - date
-  - tabletype
-
+- size
+- time
+- name
+- date
+- tabletype
 slots:
   name:
     type: text
     mappings:
     - type: from_entity
       entity: name
-
   time:
     type: text
     mappings:
-      - type: from_entity
-        entity: time
+    - type: from_entity
+      entity: time
   date:
     type: text
     mappings:
-      - type: from_entity
-        entity: date      
+    - type: from_entity
+      entity: date
   size:
     type: float
     initial_value: 1
     mappings:
-      - type: from_entity
-        entity: size
+    - type: from_entity
+      entity: size
   tabletype:
     type: text
     mappings:
     - type: from_entity
       entity: tabletype
-
 forms:
   reserve_form:
     required_slots:
-      - name
-      - size
-      - time
-      - date
-      - tabletype
-    
+    - name
+    - size
+    - time
+    - date
+    - tabletype
+actions:
+- utter_greet
