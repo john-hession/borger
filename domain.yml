@@ -32,11 +32,11 @@ responses:
   - text: Goodbye, thanks for calling Burg-hain
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
-  utter_size:
+  utter_ask_size:
   - text: How many people do want to reserve for?
-  utter_time:
+  utter_ask_time:
   - text: When do you want your reservation?
-  utter_type:
+  utter_ask_tabletype:
   - text: What type of table do you want?
 session_config:
   session_expiration_time: 60
