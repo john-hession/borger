@@ -135,3 +135,18 @@ nlu:
     - does the [6th](date) work?
     - how is [next Monday](date)?
     - The [31st](date) please
+
+- intent: out_of_scope
+  examples: |
+    - BURGER
+    - What is the capital of Lithuania?
+    - What is the weather today?
+    - What is happening in Berlin this weekend?
+    - I would like 30 hamburgers
+    - I do not like cheeseburgers
+    - Morgan is doing the crossword during class
+    - I would like a glass of water
+    - two plus two is five
+    - Joao is from Brazil
+    - Wie viel?
+    - We have too much German homework
