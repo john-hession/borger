@@ -57,50 +57,47 @@ session_config:
   carry_over_slots_to_new_session: true
 
 entities:
-  -size
-  -time
-  -name
-  -date
-  -tabletype
+  - size
+  - time
+  - name
+  - date
+  - tabletype
 
 slots:
   name:
     type: text
-    auto_fill: false
-    mappings:
     mappings:
     - type: from_entity
       entity: name
-      entity: name
+
   time:
     type: text
-    auto_fill: false
     mappings:
       - type: from_entity
         entity: time
   date:
     type: text
-    auto_fill: false
     mappings:
       - type: from_entity
         entity: date      
   size:
     type: float
     initial_value: 1
+    mappings:
       - type: from_entity
         entity: size
   tabletype:
     type: text
-    auto_fill: false
+    mappings:
     - type: from_entity
-        entity: tabletype
+      entity: tabletype
 
 forms:
   reserve_form:
     required_slots:
-      -name
-      -size
-      -time
-      -date
-      -tabletype
+      - name
+      - size
+      - time
+      - date
+      - tabletype
     
