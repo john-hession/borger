@@ -67,8 +67,11 @@ slots:
   name:
     type: text
     auto_fill: false
+    mappings:
+    mappings:
     - type: from_entity
-        entity: name
+      entity: name
+      entity: name
   time:
     type: text
     auto_fill: false
@@ -101,4 +104,3 @@ forms:
       -date
       -tabletype
     
-
