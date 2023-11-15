@@ -38,6 +38,8 @@ responses:
   - text: When do you want your reservation?
   utter_ask_tabletype:
   - text: What type of table do you want?
+    utter_slot_values: 
+  - text: "Just to confirm: You would like a {tabletype} table at Burg-hain for {size} on {date}, {time}, under the name of {name}. Yes?"
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
