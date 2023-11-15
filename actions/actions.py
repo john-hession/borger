@@ -32,7 +32,7 @@ class ActionBookAppointment(Action):
     def run(self, dispatcher:CollectingDispatcher, tracker:Tracker, 
         domain:Dict[Text, Any]) -> List[Dict[Text, Any]]:
             
-        conn = sqlite3.connect('../sqlite/restaraunt.db')
+        conn = sqlite3.connect('../sqlite/reservations.db')
         cursor = conn.cursor()
         sql = "INSERT INTO reservations (date, time_start, time_end, table_id, reserved_under, nr_guests) VALUES (?, ?, ?, ?, ?, ?);"
 
