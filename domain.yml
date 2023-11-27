@@ -14,45 +14,34 @@ intents:
 - table_type
 
 responses:
-
   utter_greet:
   - text: Hi, I'm Sam at Burg-Hain, would you like to make a reservation right now?
-
   utter_success:
   - text: Perfect! Your table has been reserved
-
   utter_failure:
   - text: Unfortunately we do not have this table available. Would you like to try searching for something different?
-
   utter_cheer_up:
   - text: 'Here is something to cheer you up:'
     image: https://i.imgur.com/nGF1K8f.jpg
-
   utter_did_that_help:
   - text: Did that help you?
-
   utter_ask_name:
   - text: Can I get a name for the reservation?
-
   utter_happy:
   - text: Great, carry on!
-  
   utter_goodbye:
   - text: Goodbye, thanks for calling Burg-hain
-
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
-
   utter_ask_size:
   - text: How many people do want to reserve for?
-
   utter_ask_time:
   - text: When do you want your reservation?
-
   utter_ask_tabletype:
   - text: What type of table do you want?
-    utter_slot_values: 
+  utter_slot_values: 
   - text: "Just to confirm: You would like a {tabletype} table at Burg-hain for {size} on {date}, {time}, under the name of {name}. Yes?"
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
@@ -97,5 +86,9 @@ forms:
     - time
     - date
     - tabletype
-actions:
-- utter_greet
+# actions:
+# - utter_ask_name
+# - utter_ask_size
+# - utter_ask_time
+# - utter_ask_tabletype
+# - utter_slot_values
