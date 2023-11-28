@@ -1,4 +1,5 @@
 version: '3.1'
+
 intents:
 - affirm
 - bot_challenge
@@ -42,15 +43,14 @@ responses:
   utter_slot_values: 
   - text: "Just to confirm: You would like a {tabletype} table at Burg-hain for {size} on {date}, {time}, under the name of {name}. Yes?"
 
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+
 entities:
 - size
 - time
 - name
 - date
 - tabletype
+
 slots:
   name:
     type: text
@@ -78,6 +78,7 @@ slots:
     mappings:
     - type: from_entity
       entity: tabletype
+
 forms:
   reserve_form:
     required_slots:
@@ -86,9 +87,10 @@ forms:
     - time
     - date
     - tabletype
-# actions:
-# - utter_ask_name
-# - utter_ask_size
-# - utter_ask_time
-# - utter_ask_tabletype
-# - utter_slot_values
+
+actions:
+- action_book_appointment
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
