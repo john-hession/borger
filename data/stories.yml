@@ -16,7 +16,7 @@ stories:
   - intent: table_time
   - action: utter_ask_time
   - intent: affirm
-  - action: utter_success
+  - action: utter_slot_values
   - intent: goodbye
   - action: utter_goodbye
 
@@ -35,7 +35,7 @@ stories:
   - intent: table_size 
   - action: utter_ask_size
   - intent: affirm
-  - action: utter_success
+  - action: utter_slot_values
   - intent: goodbye
   - action: utter_goodbye
 
@@ -73,14 +73,7 @@ stories:
   - intent: reservation_init
   - action: reserve_form
   - active_loop: reserve_form
+  - intent: affirm
+  - action: utter_slot_values
   - intent: goodbye
   - action: utter_goodbye
-- story: interactive_story_1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: reservation_init
-  - action: reserve_form
-  - active_loop: reserve_form
-  - slot_was_set:
-    - requested_slot: name

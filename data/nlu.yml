@@ -99,6 +99,38 @@ nlu:
     - Reserve a table at [Burg-Hain](name) on [7](time)
     - [Burghein](name) reservation on [20:00](time)
     - [Burg-Hain](name) reservation
+    - Reserve
+    - I want to reserve a table
+    - I want to book a table
+    - I want a dinner booking
+    - Book a table for me
+    - Book a table for [4](seats) people
+    - I want to reserve a table for a party of [4](seats)
+    - Book a dinner for [9](seats) around 7:30pm
+    - Please can you book a table for [2](seats) members in half an hour?
+    - Book a dinner for me in 10 minutes
+    - I want to book a table in 1 hr
+    - I want to reserve a table for a party of [3](seats) in [non-AC](section) section
+    - I want an [AC](section) booking for a party of [4](seats)
+    - Please book a table for me in [AC](section) section in one hour
+    - Book a [non-AC](section) dinner for me at 10 pm
+    - could you book a [non-AC](section) dinner for a [7](seats) member party at around [8 pm](time)
+    - I want a [AC](section) dinner booking for [5](seats) in [40 minutes](time)
+    - I want to reserve an [AC](section) dinner
+    - Book a [non-AC](section) table for me please
+    - book me [non-AC](section) dinner at 9 pm
+    - book [4](seats) seats for 4pm
+    - book a [non-AC](section) dinner for [4](seats) people
+    - book me an [AC](section) dinner at 7pm
+    - book [4](seats) seats in [Non-AC](section) section
+    - i want to book a seat in [AC](section) section
+    - book
+    - book [4](seats) seats for m
+    - book a seat for me
+    - could u book a dinner for me?
+    - book me a seat please
+    - book me a seat
+    - book me a seat pls
 - intent: name_guest
   examples: |
     - [Bob](name)
@@ -117,6 +149,18 @@ nlu:
     - is there availability for [1](size)
     - do you have a table for [2](size)
     - I would like a table for [3](size)
+    - [2](seats) seats
+    - [7](seats)
+    - [5](seats) people
+    - [4](seats) members
+    - [11](seats) peeps
+    - for a party of [9](seats)
+    - [3](seats) seats for a party
+    - [1](seats) seat
+    - [3](seats)
+    - [4](seats)
+    - [6](seats)
+    - [5](seats)
 - intent: table_type
   examples: |
     - I would like a [window](tabletype) table
@@ -127,6 +171,15 @@ nlu:
     - Is there a [corner](tabletype) table available?
 - intent: table_time
   examples: |
+    - [8](time) tonight
+    - [9pm](time) lol
+    - [1pm](time)
+    - [9pm](time)
+    - [6pm](time)
+    - [4 pm](time)
+    - [8pm](time)
+    - [5pm](time)
+    - [8 pm](time)
     - [6:30](time)
     - at [19:00](time)
     - does [12 pm](time) work?
@@ -135,7 +188,40 @@ nlu:
     - does the [6th](date) work?
     - how is [next Monday](date)?
     - The [31st](date) please
+    - in [half an hour]
+    - at 7:30pm
+    - in 20 minutes
+    - 9 pm
+    - in 2 hrs
+    - at half past 9 
 
+- intent: faq_days
+  examples: |
+    - What days are you open?
+    - On which days does the restaurant open?
+    - Which days are u available?
+    - Tell me which days are u open.
+    - Tell me your working days.
+    - Are u open on Sunday?
+    - Do you open on Saturday?
+    - Is the restaurant open on Thursday?
+    - Does the restaurant remain closed on Sunday?
+    
+- intent: faq_cancel
+  examples: |
+    - How do I cancel a reservation.
+    - How to cancel a reservation?
+    - How do I cancel my booking?
+    - Could you cancel my booking?
+    - Cancel
+    - Kindly cancel my reserved dinner.
+    - Please cancel request.
+    - Cancellation policy.
+    - how to cancel booking.
+    - btw how to cancel my booking?
+    - i want to cancel my booking
+    - hey pls cancel my booking
+    - pls cancel my booking
 - intent: out_of_scope
   examples: |
     - BURGER

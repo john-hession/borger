@@ -1,6 +1,7 @@
 version: '3.1'
 
 intents:
+- out_of_scope
 - affirm
 - bot_challenge
 - deny
@@ -13,6 +14,8 @@ intents:
 - table_size
 - table_time
 - table_type
+- faq_days
+- faq_cancel
 
 responses:
   utter_greet:
@@ -42,7 +45,12 @@ responses:
   - text: What type of table do you want?
   utter_slot_values: 
   - text: "Just to confirm: You would like a {tabletype} table at Burg-hain for {size} on {date}, {time}, under the name of {name}. Yes?"
-
+  utter_out_of_scope:
+  - text: "Sorry, I'm not sure I understand, would you like to book a table?"
+  utter_faq_days:
+  - text: "Burg-Hain is open 24 hours a day 7 days a week"
+  utter_faq_cancel:
+  - text: "To cancel a reservation, simply call us at +49-1234567890 and cancel your reservation."
 
 entities:
 - size
@@ -90,6 +98,7 @@ forms:
 
 actions:
 - action_book_appointment
+- action_get_greeting_chatgpt
 
 session_config:
   session_expiration_time: 60
