@@ -21,13 +21,13 @@ stories:
     - time: 7:30pm
   - action: action_check_availability
   - slot_was_set:
-    - next_slot_to_fill: size
+    - next_slot_to_fill: seats
   - action: utter_ask_size
   - intent: inform
     entities:
-    - size: six
+    - seats: six
   - slot_was_set:
-    - size: six
+    - seats: six
   - action: action_check_availability
   - slot_was_set:
     - avail: true
@@ -54,3 +54,47 @@ stories:
   - action: utter_slot_values
   - intent: goodbye
   - action: utter_goodbye
+- story: interactive_story_1
+  steps:
+  - intent: reservation_init
+  - action: utter_ask_tabletype
+  - intent: table_size
+  - intent: table_size
+  - action: utter_ask_time
+  - intent: reservation_init
+    entities:
+    - time: 5pm
+  - slot_was_set:
+    - time: 5pm
+  - intent: table_time
+    entities:
+    - time: 5pm
+    - tomorrow: date
+  - action: action_check_availability
+  - slot_was_set:
+    - next_slot_to_fill: name
+  - action: utter_ask_size
+  - intent: table_size
+    entities:
+    - seats: '6'
+  - slot_was_set:
+    - seats: '6'
+  - action: action_check_availability
+  - slot_was_set:
+    - next_slot_to_fill: name
+  - action: utter_ask_name
+  - intent: name_guest
+    entities:
+    - name: Jake
+  - slot_was_set:
+    - name: Jake
+  - action: action_book_appointment
+  - action: utter_slot_values
+  - intent: reservation_init
+  - intent: table_time
+    entities:
+    - tomorrow: date
+  - action: utter_slot_values
+  - intent: confirm
+  - action: utter_goodbye
+  - action: utter_failure

@@ -16,7 +16,6 @@ nlu:
     - goodevening
     - good afternoon
     - Hi
-
 - intent: goodbye
   examples: |
     - cu
@@ -29,8 +28,7 @@ nlu:
     - see you around
     - bye bye
     - see you later
-
-- intent: affirm
+- intent: confirm
   examples: |
     - yes
     - y
@@ -38,7 +36,7 @@ nlu:
     - of course
     - that sounds good
     - correct
-
+    - Yep
 - intent: deny
   examples: |
     - no
@@ -48,7 +46,6 @@ nlu:
     - don't like that
     - no way
     - not really
-
 - intent: mood_great
   examples: |
     - perfect
@@ -65,7 +62,6 @@ nlu:
     - so so perfect
     - so good
     - so perfect
-
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -82,14 +78,12 @@ nlu:
     - extremly sad
     - so saad
     - so sad
-
 - intent: bot_challenge
   examples: |
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
-
 - intent: reservation_init
   examples: |
     - Hello, I would like to book a table at [Burg-Hain](name)
@@ -138,7 +132,7 @@ nlu:
     - book me a seat please
     - book me a seat
     - book me a seat pls
-
+    - Hi there, I'd like to book a table
 - intent: name_guest
   examples: |
     - [Bob](name)
@@ -148,7 +142,7 @@ nlu:
     - [George](name) is my name
     - The booking is for [Jake](name)
     - Booking for [Quigs](name)
-
+    - [Jake](name)
 - intent: table_size
   examples: |
     - [2](size)
@@ -170,7 +164,8 @@ nlu:
     - [4](seats)
     - [6](seats)
     - [5](seats)
-
+    - We have six people
+    - We have [6](seats) people in our party
 - intent: table_type
   examples: |
     - I would like a [window](tabletype) table
@@ -179,7 +174,6 @@ nlu:
     - Maybe a [bar](tabletype) seat?
     - Is there a [window](tabletype) table?
     - Is there a [corner](tabletype) table available?
-
 - intent: table_time
   examples: |
     - [8](time) tonight
@@ -204,8 +198,9 @@ nlu:
     - in 20 minutes
     - 9 pm
     - in 2 hrs
-    - at half past 9 
-
+    - at half past 9
+    - Can we book for [5pm](time)[ tom]{"entity": "tomorrow", "value": "date"}orrow?
+    - No I want my reservaton to be [tomo]{"entity": "tomorrow", "value": "date"}rrow
 - intent: faq_days
   examples: |
     - What days are you open?
@@ -217,7 +212,6 @@ nlu:
     - Do you open on Saturday?
     - Is the restaurant open on Thursday?
     - Does the restaurant remain closed on Sunday?
-    
 - intent: faq_cancel
   examples: |
     - How do I cancel a reservation.
@@ -233,7 +227,6 @@ nlu:
     - i want to cancel my booking
     - hey pls cancel my booking
     - pls cancel my booking
-
 - intent: out_of_scope
   examples: |
     - BURGER
@@ -248,7 +241,6 @@ nlu:
     - Joao is from Brazil
     - Wie viel?
     - We have too much German homework
-
 - regex: date
   examples: |
     - (?:january|february|march|april|may|june|july|august|september|october|november|december) \d+(?:st|nd|rd|th)
@@ -257,7 +249,6 @@ nlu:
     - (?:today|tomorrow|day after tomorrow)
     - in (?:one|two|three|four|five|six|seven|\d) days
     - on (?:monday|tuesday|wednesday|thursday|friday|saturday|sunday)
-
 - regex: time
   examples: |
     - [\d\:]+(?: *[ap]m)?
