@@ -1,24 +1,24 @@
 version: "3.1"
 
 stories:
-- story: reservation_1
+- story: try_change_of_mind_1
   steps:
   - intent: greet
   - action: utter_greet
   - intent: inform
     entities:
-    - date: tuesday
+    - date: tomorrow
   - slot_was_set:
-    - date: tuesday
+    - date: tomorrow
   - action: action_check_availability
   - slot_was_set:
     - next_slot_to_fill: time
   - action: utter_ask_time
   - intent: inform
     entities:
-    - time: 6:30pm
+    - time: 7:30pm
   - slot_was_set:
-    - time: 6:30pm
+    - time: 7:30pm
   - action: action_check_availability
   - slot_was_set:
     - next_slot_to_fill: size
@@ -38,54 +38,9 @@ stories:
   - action: utter_ask_name
   - intent: inform
     entities:
-    - name: bob
+    - name: mike
   - slot_was_set:
-    - name: bob
-  - action: action_book_appointment
-  - action: utter_success
-  - intent: goodbye
-  - action: utter_goodbye
-
-  - story: reservation_2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: inform
-    entities:
-    - date: next monday
-  - slot_was_set:
-    - date: next monday
-  - action: action_check_availability
-  - slot_was_set:
-    - next_slot_to_fill: time
-  - action: utter_ask_time
-  - intent: inform
-    entities:
-    - time: five pm
-  - slot_was_set:
-    - time: five pm
-  - action: action_check_availability
-  - slot_was_set:
-    - next_slot_to_fill: size
-  - action: utter_ask_size
-  - intent: inform
-    entities:
-    - size: 3
-  - slot_was_set:
-    - size: 3
-  - action: action_check_availability
-  - slot_was_set:
-    - avail: true
-  - slot_was_set:
-    - next_slot_to_fill: none
-  - intent: confirm
-  - action: utter_ask_name
-  - intent: inform
-    entities:
-    - name: bob
-  - slot_was_set:
-    - name: bob
-  - action: utter_slot_values
+    - name: mike
   - action: action_book_appointment
   - action: utter_success
   - intent: goodbye
@@ -95,10 +50,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: reservation_init
-  - action: reserve_form
-  - active_loop: reserve_form
-  - intent: affirm
+  - intent: confirm
   - action: utter_slot_values
   - intent: goodbye
   - action: utter_goodbye

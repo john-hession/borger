@@ -23,7 +23,6 @@ max_guests_per_table = 8
 #  print("number_guests: {0}, nr_tables_needed: {1}".format(number_guests, nr_tables_needed))
 #  return nr_tables_needed
 
-
 class CheckAvailability(Action):
 
     def name(self) -> Text:
