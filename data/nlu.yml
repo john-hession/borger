@@ -16,6 +16,7 @@ nlu:
     - goodevening
     - good afternoon
     - Hi
+
 - intent: goodbye
   examples: |
     - cu
@@ -28,6 +29,7 @@ nlu:
     - see you around
     - bye bye
     - see you later
+
 - intent: affirm
   examples: |
     - yes
@@ -36,6 +38,7 @@ nlu:
     - of course
     - that sounds good
     - correct
+
 - intent: deny
   examples: |
     - no
@@ -45,6 +48,7 @@ nlu:
     - don't like that
     - no way
     - not really
+
 - intent: mood_great
   examples: |
     - perfect
@@ -61,6 +65,7 @@ nlu:
     - so so perfect
     - so good
     - so perfect
+
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -77,12 +82,14 @@ nlu:
     - extremly sad
     - so saad
     - so sad
+
 - intent: bot_challenge
   examples: |
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
 - intent: reservation_init
   examples: |
     - Hello, I would like to book a table at [Burg-Hain](name)
@@ -131,6 +138,7 @@ nlu:
     - book me a seat please
     - book me a seat
     - book me a seat pls
+
 - intent: name_guest
   examples: |
     - [Bob](name)
@@ -140,10 +148,11 @@ nlu:
     - [George](name) is my name
     - The booking is for [Jake](name)
     - Booking for [Quigs](name)
+
 - intent: table_size
   examples: |
     - [2](size)
-    - table for [3 people](size)
+    - table for [3] (size) people
     - [4](size) people
     - for [6](size)
     - is there availability for [1](size)
@@ -161,6 +170,7 @@ nlu:
     - [4](seats)
     - [6](seats)
     - [5](seats)
+
 - intent: table_type
   examples: |
     - I would like a [window](tabletype) table
@@ -169,6 +179,7 @@ nlu:
     - Maybe a [bar](tabletype) seat?
     - Is there a [window](tabletype) table?
     - Is there a [corner](tabletype) table available?
+
 - intent: table_time
   examples: |
     - [8](time) tonight
@@ -222,6 +233,7 @@ nlu:
     - i want to cancel my booking
     - hey pls cancel my booking
     - pls cancel my booking
+
 - intent: out_of_scope
   examples: |
     - BURGER
@@ -236,3 +248,16 @@ nlu:
     - Joao is from Brazil
     - Wie viel?
     - We have too much German homework
+
+- regex: date
+  examples: |
+    - (?:january|february|march|april|may|june|july|august|september|october|november|december) \d+(?:st|nd|rd|th)
+    - (?:next )?(?:monday|tuesday|wednesday|thursday|friday|saturday|sunday) *(?:in a week|next week| after next)
+    - (?:one|two|three|four|five|six|seven|\d) days from now
+    - (?:today|tomorrow|day after tomorrow)
+    - in (?:one|two|three|four|five|six|seven|\d) days
+    - on (?:monday|tuesday|wednesday|thursday|friday|saturday|sunday)
+
+- regex: time
+  examples: |
+    - [\d\:]+(?: *[ap]m)?
