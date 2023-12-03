@@ -2,54 +2,54 @@ version: "3.1"
 
 rules:
 
-- rule: out of scope response
-  steps:
-  - intent: out_of_scope
-  - action: utter_out_of_scope
+# - rule: out of scope response
+#   steps:
+#   - intent: out_of_scope
+#   - action: utter_out_of_scope
 
-- rule: Activate form
-  steps:
-  - intent: reservation_init
-  - action: reserve_form
-  - active_loop: reserve_form
+# - rule: Activate form
+#   steps:
+#   - intent: reservation_init
+#   - action: reserve_form
+#   - active_loop: reserve_form
 
-- rule: Submit form
-  condition:
-  - active_loop: reserve_form
-  steps:
-  - action: reserve_form
-  - active_loop: null
-  - slot_was_set:
-    - requested_slot: null
-  - action: utter_slot_values
+# # - rule: Submit form
+# #   condition:
+# #   - active_loop: reserve_form
+# #   steps:
+# #   - action: reserve_form
+# #   - active_loop: null
+# #   - slot_was_set:
+# #     - requested_slot: null
+# #   - action: utter_slot_values
 
-- rule: greet with hello
-  steps:
-  - intent: greet
-  - action: utter_greet
+# - rule: greet with hello
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
 
-- rule: Say goodbye anytime the user says goodbye
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
+# - rule: Say goodbye anytime the user says goodbye
+#   steps:
+#   - intent: goodbye
+#   - action: utter_goodbye
 
-- rule: Say 'I am a bot' anytime the user challenges
-  steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+# - rule: Say 'I am a bot' anytime the user challenges
+#   steps:
+#   - intent: bot_challenge
+#   - action: utter_iamabot
 
-- rule: Table Book
-  steps:
-    - intent: reservation_init
-    - action: reserve_form
-    - active_loop: reserve_form
+# - rule: Table Book
+#   steps:
+#     - intent: reservation_init
+#     - action: reserve_form
+#     - active_loop: reserve_form
 
-- rule: respond faq days
-  steps:
-  - intent: faq_days
-  - action: utter_faq_days
+# - rule: respond faq days
+#   steps:
+#   - intent: faq_days
+#   - action: utter_faq_days
 
-- rule: respond faq cancel
-  steps:
-  - intent: faq_cancel
-  - action: utter_faq_cancel
+# - rule: respond faq cancel
+#   steps:
+#   - intent: faq_cancel
+#   - action: utter_faq_cancel

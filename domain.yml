@@ -25,7 +25,7 @@ responses:
   - text: Just reserved your table.
   - text: Your table has been reserved. Remember no pictures inside please.
   utter_failure:
-  - text: Sorry, not tonight
+  - text: Sorry, another night
   - text: No.
   - text: Sorry, not tonight guys, please exit to the left
   utter_did_that_help:
@@ -149,4 +149,4 @@ actions:
 
 session_config:
   session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  carry_over_slots_to_new_session: false
