@@ -42,7 +42,7 @@ class CheckAvailability(Action):
         if tracker.get_slot('tabletype') is None:
             return [SlotSet("next_slot_to_fill", 'tabletype')]
 
-        conn = sqlite3.connect('../sqlite/reservations.db') 
+        conn = sqlite3.connect('../sqlite/restaurant-20231203.db') 
         cursor = conn.cursor()
 
         sql = "SELECT * FROM reservations"
@@ -88,7 +88,7 @@ class ActionBookAppointment(Action):
 
         # nr_tables_needed = get_nr_tables_needed(int(tracker.get_slot('number_guests')))
 
-        conn = sqlite3.connect('../sqlite/restaurant-20231024.db') 
+        conn = sqlite3.connect('../sqlite/restaurant-20231203.db') 
         cursor = conn.cursor()
 
         date_time_string = tracker.get_slot('date') + ' ' + tracker.get_slot('time')
