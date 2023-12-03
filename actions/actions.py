@@ -43,7 +43,7 @@ class CheckAvailability(Action):
         if tracker.get_slot('tabletype') is None:
             return [SlotSet("next_slot_to_fill", 'tabletype')]
 
-        conn = sqlite3.connect('../sqlite/restaurant-20231024.db') 
+        conn = sqlite3.connect('../sqlite/reservations.db') 
         cursor = conn.cursor()
 
         sql = "SELECT * FROM reservations"
@@ -97,7 +97,7 @@ class ActionBookAppointment(Action):
 
         guests = int(tracker.get_slot('size'))
         for t in range(1):
-            sql="INSERT INTO reservations (date, reserved_under, guests) VALUES (?, ?, ?);"
+            sql="INSERT INTO reservations (date, reserved_under, nr_guests) VALUES (?, ?, ?);"
             cursor.execute(sql,(date_time_formatted, tracker.get_slot('name'), guests))
             # Commit your changes in the database
             conn.commit()
