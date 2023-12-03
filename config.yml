@@ -38,4 +38,3 @@ policies:
      epochs: 100
      constrain_similarities: true
      model_confidence: softmax
-   - name: RulePolicy

@@ -19,34 +19,53 @@ intents:
 
 responses:
   utter_greet:
-  - text: Hi, I'm Sam at Burg-Hain, would you like to make a reservation right now?
+  - text: Hi, I'm Sam at Burg-Hain, would you like to make a reservation right now? We can take reservation sizes of up to 8 people, but we are not available to larger groups. \
   utter_success:
   - text: Perfect! Your table has been reserved
+  - text: Just reserved your table.
+  - text: Your table has been reserved. Remember no pictures inside please.
   utter_failure:
-  - text: Unfortunately we do not have this table available. Would you like to try searching for something different?
-  utter_cheer_up:
-  - text: 'Here is something to cheer you up:'
-    image: https://i.imgur.com/nGF1K8f.jpg
+  - text: Sorry, not tonight
+  - text: No.
+  - text: Sorry, not tonight guys, please exit to the left
   utter_did_that_help:
   - text: Did that help you?
   utter_ask_name:
   - text: Can I get a name for the reservation?
-  utter_happy:
-  - text: Great, carry on!
+  - text: Under what name?
+  - text: What's your name please?
+  - text: Can you give me a name for the reservation?
   utter_goodbye:
   - text: Goodbye, thanks for calling Burg-hain
+  - text: See you then, {name} - take care!
+  - text: Goodbye!
+  - text: Take care, {name}!
   utter_iamabot:
-  - text: I am a bot, powered by Rasa.
+  - text: I am a bot named SAM whose purpose is to help you book tables at Burg-Hein.
   utter_ask_size:
+  - text: For how many people?
+  - text: What's your party's size?
+  - text: How big is your party?
   - text: How many people do want to reserve for?
+  - text: For how many guests?
+  - text: How many people are you?
   utter_ask_time:
   - text: When do you want your reservation?
+  - text: What day and time would you like to reserve a table?
+  - text: When would you like to reserve for? Please state the day and time.
+  - text: What day and time?
   utter_ask_tabletype:
   - text: What type of table do you want?
+  - text: For how many guests?
+  - text: How many people are you?
+  - text: For how many people?
+  - text: What's your party's size?
+  - text: How big is your party?
   utter_slot_values: 
   - text: "Just to confirm: You would like a {tabletype} table at Burg-hain for {size} on {date}, {time}, under the name of {name}. Yes?"
   utter_out_of_scope:
   - text: "Sorry, I'm not sure I understand, would you like to book a table?"
+  - text: "I'm not sure I can do that for you, but I can help with "
   utter_faq_days:
   - text: "Burg-Hain is open 24 hours a day 7 days a week"
   utter_faq_cancel:
@@ -58,47 +77,75 @@ entities:
 - name
 - date
 - tabletype
+- avail
 
 slots:
   name:
     type: text
+    value: null
+    influence_conversation: true
     mappings:
     - type: from_entity
       entity: name
   time:
     type: text
+    value: null
+    influence_conversation: true
     mappings:
     - type: from_entity
       entity: time
   date:
     type: text
+    value: null
+    influence_conversation: true
     mappings:
     - type: from_entity
       entity: date
   size:
     type: float
     initial_value: 1
+    influence_conversation: true
     mappings:
     - type: from_entity
       entity: size
   tabletype:
     type: text
+    value: null
+    influence_conversation: true
     mappings:
     - type: from_entity
       entity: tabletype
-
-forms:
-  reserve_form:
-    required_slots:
-    - name
-    - size
-    - time
+  avail:
+    type: bool
+    initial_value: false
+    influence_conversation: true
+    mappings:
+    - type: custom
+  next_slot_to_fill:
+    type: categorical
+    influence_conversation: true
+    values:
     - date
-    - tabletype
+    - time
+    - number_guests
+    - none
+    initial_value: date
 
 actions:
-- action_book_appointment
-- action_get_greeting_chatgpt
+- utter_greet
+- utter_success
+- utter_failure
+- utter_did_that_help
+- utter_ask_name
+- utter_goodbye
+- utter_iamabot
+- utter_ask_size
+- utter_ask_time
+- utter_ask_tabletype
+- utter_slot_values
+- utter_out_of_scope
+- utter_faq_days
+- utter_faq_cancel
 
 session_config:
   session_expiration_time: 60
