@@ -1,69 +1,94 @@
 version: "3.1"
 
 stories:
-- story: make reservation 1
+- story: reservation_1
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: reservation_init
-  - action: reserve_form
-  - intent: name_guest
-  - action: utter_ask_name
-  - intent: table_size 
-  - action: utter_ask_size
-  - intent: table_type
-  - action: utter_ask_tabletype
-  - intent: table_time
+  - intent: inform
+    entities:
+    - date: tuesday
+  - slot_was_set:
+    - date: tuesday
+  - action: action_check_availability
+  - slot_was_set:
+    - next_slot_to_fill: time
   - action: utter_ask_time
-  - intent: affirm
+  - intent: inform
+    entities:
+    - time: 6:30pm
+  - slot_was_set:
+    - time: 6:30pm
+  - action: action_check_availability
+  - slot_was_set:
+    - next_slot_to_fill: size
+  - action: utter_ask_size
+  - intent: inform
+    entities:
+    - size: six
+  - slot_was_set:
+    - size: six
+  - action: action_check_availability
+  - slot_was_set:
+    - avail: true
+  - slot_was_set:
+    - next_slot_to_fill: none
   - action: utter_slot_values
+  - intent: confirm
+  - action: utter_ask_name
+  - intent: inform
+    entities:
+    - name: bob
+  - slot_was_set:
+    - name: bob
+  - action: action_book_appointment
+  - action: utter_success
   - intent: goodbye
   - action: utter_goodbye
 
-- story: make reservation better
+  - story: reservation_2
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: reservation_init
-  - action: reserve_form
-  - intent: name_guest
-  - action: utter_ask_name
-  - intent: table_time
+  - intent: inform
+    entities:
+    - date: next monday
+  - slot_was_set:
+    - date: next monday
+  - action: action_check_availability
+  - slot_was_set:
+    - next_slot_to_fill: time
   - action: utter_ask_time
-  - intent: table_type
-  - action: utter_ask_tabletype
-  - intent: table_size 
+  - intent: inform
+    entities:
+    - time: five pm
+  - slot_was_set:
+    - time: five pm
+  - action: action_check_availability
+  - slot_was_set:
+    - next_slot_to_fill: size
   - action: utter_ask_size
-  - intent: affirm
+  - intent: inform
+    entities:
+    - size: 3
+  - slot_was_set:
+    - size: 3
+  - action: action_check_availability
+  - slot_was_set:
+    - avail: true
+  - slot_was_set:
+    - next_slot_to_fill: none
+  - intent: confirm
+  - action: utter_ask_name
+  - intent: inform
+    entities:
+    - name: bob
+  - slot_was_set:
+    - name: bob
   - action: utter_slot_values
+  - action: action_book_appointment
+  - action: utter_success
   - intent: goodbye
-  - action: utter_goodbye
-
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
-
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
   - action: utter_goodbye
 
 - story: sample reservation 1  
