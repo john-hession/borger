@@ -22,7 +22,6 @@ pipeline:
   - name: DIETClassifier
     epochs: 100
     constrain_similarities: true
-  - name: "components.sentiment.SentimentAnalyzer"
   - name: EntitySynonymMapper
   - name: ResponseSelector
     epochs: 100

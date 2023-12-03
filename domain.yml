@@ -2,7 +2,8 @@ version: '3.1'
 
 intents:
 - out_of_scope
-- affirm
+- inform
+- confirm
 - bot_challenge
 - deny
 - goodbye
@@ -82,21 +83,21 @@ entities:
 slots:
   name:
     type: text
-    value: null
+    initial_value: null
     influence_conversation: true
     mappings:
     - type: from_entity
       entity: name
   time:
     type: text
-    value: null
+    initial_value: null
     influence_conversation: true
     mappings:
     - type: from_entity
       entity: time
   date:
     type: text
-    value: null
+    initial_value: null
     influence_conversation: true
     mappings:
     - type: from_entity
@@ -110,7 +111,7 @@ slots:
       entity: size
   tabletype:
     type: text
-    value: null
+    initial_value: null
     influence_conversation: true
     mappings:
     - type: from_entity
@@ -130,7 +131,8 @@ slots:
     - number_guests
     - none
     initial_value: date
-
+    mappings:
+    - type: custom
 actions:
 - utter_greet
 - utter_success
@@ -146,6 +148,8 @@ actions:
 - utter_out_of_scope
 - utter_faq_days
 - utter_faq_cancel
+- action_book_appointment
+- action_check_availability
 
 session_config:
   session_expiration_time: 60
