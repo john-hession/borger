@@ -2,8 +2,8 @@ version: '3.1'
 intents:
 - confirm
 - deny
-- faq_cancel
 - faq_days
+- faq_cancel
 - goodbye
 - greet
 - inform
@@ -33,7 +33,7 @@ responses:
   - text: Take care, {name}!
   utter_iamabot:
   - text: I am a bot named SAM whose purpose is to help you book tables at Burg-Hein.
-  utter_ask_size:
+  utter_ask_seats:
   - text: For how many people?
   - text: What's your party's size?
   - text: How big is your party?
@@ -62,12 +62,12 @@ responses:
   utter_faq_cancel:
   - text: To cancel a reservation, simply call us at +49-1234567890 and cancel your reservation.
 entities:
-- name
 - seats
 - time
-- tomorrow
-- date
+- name
 - tabletype
+- date
+- tomorrow
 - avail
 slots:
   name:
@@ -124,20 +124,20 @@ slots:
     mappings:
     - type: custom
 actions:
-- utter_slot_values
-- utter_ask_size
 - utter_ask_time
-- action_check_availability
-- utter_failure
-- utter_ask_name
+- utter_slot_values
 - utter_ask_tabletype
+- utter_success
+- action_check_availability
 - utter_goodbye
 - action_book_appointment
+- utter_ask_size
+- utter_ask_name
 - utter_greet
-- utter_success
+- utter_out_of_scope
+- utter_failure
 - utter_did_that_help
 - utter_iamabot
-- utter_out_of_scope
 - utter_faq_days
 - utter_faq_cancel
 session_config:

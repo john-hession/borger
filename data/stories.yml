@@ -46,3 +46,114 @@ stories:
   - intent: goodbye
   - action: utter_goodbye
 
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: inform
+  - action: action_check_availability
+  - action: utter_ask_size
+  - intent: inform
+    entities:
+    - seats: '6'
+  - slot_was_set:
+    - seats: '6'
+  - action: action_check_availability
+  - action: utter_ask_time
+  - intent: inform
+    entities:
+    - date: Next tuesday
+    - time: 5 pm
+  - slot_was_set:
+    - time: 5 pm
+  - slot_was_set:
+    - date: Next tuesday
+  - action: action_check_availability
+  - action: utter_ask_tabletype
+  - intent: table_type
+    entities:
+    - tabletype: window
+  - slot_was_set:
+    - tabletype: window
+  - action: action_check_availability
+  - action: utter_ask_name
+  - intent: name_guest
+    entities:
+    - name: Bob
+  - slot_was_set:
+    - name: Bob
+  - action: action_book_appointment
+  - action: utter_slot_values
+  - intent: nlu_fallback
+    entities:
+    - number_guests: one
+  - intent: confirm
+  - action: utter_goodbye
+  - intent: goodbye
+
+- story: out_of_scope_interactive_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - intent: inform
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - intent: out_of_scope
+    entities:
+    - name: bbbburger
+  - slot_was_set:
+    - name: bbbburger
+  - intent: out_of_scope
+  - action: utter_goodbye
+
+- story: interactive_story_2
+  steps:
+  - action: utter_greet
+  - intent: inform
+  - action: action_check_availability
+  - slot_was_set:
+    - next_slot_to_fill: name
+  - action: utter_ask_size
+  - intent: table_size
+  - intent: inform
+    entities:
+    - seats: five
+  - action: action_check_availability
+  - slot_was_set:
+    - next_slot_to_fill: name
+  - action: utter_ask_time
+  - intent: inform
+    entities:
+    - date: tomorrow
+    - time: '4'
+  - slot_was_set:
+    - time: '4'
+  - slot_was_set:
+    - date: tomorrow
+  - action: action_check_availability
+  - slot_was_set:
+    - next_slot_to_fill: name
+  - action: utter_ask_tabletype
+  - intent: inform
+    entities:
+    - tabletype: bar
+  - slot_was_set:
+    - tabletype: bar
+  - action: action_check_availability
+  - slot_was_set:
+    - next_slot_to_fill: name
+  - action: utter_ask_name
+  - intent: name_guest
+  - intent: inform
+    entities:
+    - name: harold
+  - action: action_book_appointment
+  - action: utter_slot_values
+  - intent: confirm
+  - action: utter_success
+  - action: utter_goodbye

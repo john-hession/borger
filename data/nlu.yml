@@ -22,6 +22,8 @@ nlu:
     - [quigs](name) here, hello
     - hey this is [lina](name)
     - hi, this is [tin](name)
+    - hi there
+    - BORGERRR
 - intent: inform
   examples: |
     - Hello, I would like to book a table at [Burg-Hain](name)
@@ -103,7 +105,6 @@ nlu:
     - [9pm](time) lol
     - [1pm](time)
     - [9pm](time)
-    - [6pm](time)
     - [4 pm](time)
     - [8pm](time)
     - [5pm](time)
@@ -122,6 +123,14 @@ nlu:
     - [9 pm] (time)
     - in [2 hrs] (time)
     - at [half past 9] (time)
+    - I would like to make a reservation right now
+    - [6](seats) guests please
+    - [Next](date) tuesday at [5 pm](time) please
+    - yes I would like to book a table
+    - [five](seats) people
+    - [tomorrow](date) at [4](time) would be good
+    - We'd like to be seated at the [bar](tabletype)
+    - My name is [harold](name)
 - intent: goodbye
   examples: |
     - cu
@@ -135,6 +144,7 @@ nlu:
     - bye bye
     - see you later
     - cya
+    - Bye!
 - intent: confirm
   examples: |
     - yes
@@ -144,6 +154,8 @@ nlu:
     - that sounds good
     - correct
     - Yep
+    - Yep that's the one
+    - yep
 - intent: deny
   examples: |
     - no
@@ -194,7 +206,7 @@ nlu:
     - Maybe a [bar](tabletype) seat?
     - Is there a [window](tabletype) table?
     - Is there a [corner](tabletype) table available?
-
+    - We'd like to have a [window](tabletype) table
 - intent: faq_days
   examples: |
     - What days are you open?
@@ -251,6 +263,10 @@ nlu:
     - fuck you
     - bingus
     - awrpirnwoivnarbinsenpvwaivbaviprabvawe0iubr
+    - NO I WANT A BURGER
+    - I AM BURGER
+    - BOOOOOOO
+    - burger burger bburger bbbburger
 - regex: date
   examples: |
     - (?:january|february|march|april|may|june|july|august|september|october|november|december) \d+(?:st|nd|rd|th)
