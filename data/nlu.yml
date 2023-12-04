@@ -23,7 +23,6 @@ nlu:
     - hey this is [lina](name)
     - hi, this is [tin](name)
     - hi there
-    - BORGERRR
     - Hi ther
 - intent: inform
   examples: |
@@ -175,7 +174,6 @@ nlu:
     - Is there a [bar](tabletype) table available?
     - We'd like to have a [window](tabletype) table
     - I would like to book a table
-    - [four](seats) people
     - this [tuesday](date) at [5pm](time)
     - [bar](tabletype) would be good
     - [Clarence](name)
@@ -201,40 +199,29 @@ nlu:
     - [Grace] (name)
     - [Samuel] (name)
     - [Scarlett] (name)
-    - [Jackson] (name)
     - [Zoey] (name)
     - [Victoria] (name)
     - [Oliver] (name)
     - [Emily] (name)
     - [Aria] (name)
     - [Riley] (name)
-    - [Liam] (name)
     - [Chloe] (name)
     - [Ethan] (name)
     - [Charlotte] (name)
     - [Amelia] (name)
-    - [Evelyn] (name)
     - [James] (name)
     - [Layla] (name)
-    - [Ella] (name)
     - [Aurora] (name)
     - [Maya] (name)
     - [Jacob] (name)
     - [Penelope] (name)
-    - [Harper] (name)
     - [William] (name)
     - [Sofia] (name)
-    - [Mia] (name)
     - [Lucy] (name)
-    - [Scarlett] (name)
     - [Daniel] (name)
-    - [Aria] (name)
-    - [Grace] (name)
     - [Jack] (name)
-    - [Lily] (name)
     - [Madison] (name)
     - [Zoe] (name)
-    - [Samuel] (name)
     - [Mila] (name)
     - [Leo] (name)
     - [Aaliyah] (name)
@@ -243,40 +230,11 @@ nlu:
     - Liam] (name)
     - [Avery] (name)
     - [Camila] (name)
-    - [Benjamin] (name)
     - [Hannah] (name)
-    - [Oliver] (name)
-    - [Layla] (name)
-    - [Ethan] (name)
-    - [Scarlett] (name)
-    - [Ella] (name)
-    - [Lucy] (name)
     - [Owen] (name)
     - [Stella] (name)
-    - [Isabella] (name)
-    - [Penelope] (name)
-    - [William] (name)
-    - [Mia] (name)
     - [Sebastian] (name)
-    - [Chloe] (name)
-    - [Emily] (name)
-    - [Abigail] (name)
-    - [Avery] (name)
-    - [Riley] (name)
-    - [Madison] (name)
-    - [Scarlett] (name)
     - [Skylar] (name)
-    - [Chloe] (name)
-    - [Lily] (name)
-    - [Liam] (name)
-    - [Zoey] (name)
-    - [Mila] (name)
-    - [Emma] (name)
-    - [Olivia] (name)
-    - [Ava] (name)
-    - [Isabella] (name)
-    - [Sophia] (name)
-    - [Jackson] (name)
 - intent: goodbye
   examples: |
     - cu
@@ -338,8 +296,10 @@ nlu:
     - i want to cancel my booking
     - hey pls cancel my booking
     - pls cancel my booking
+    - I want to cancel my reservation
 - intent: out_of_scope
   examples: |
+    - BORGERRR
     - BURGER
     - What is the capital of Lithuania?
     - What is the weather today?
@@ -372,6 +332,7 @@ nlu:
     - I AM BURGER
     - BOOOOOOO
     - burger burger bburger bbbburger
+    - okay
 - regex: date
   examples: |
     - (?:january|february|march|april|may|june|july|august|september|october|november|december) \d+(?:st|nd|rd|th)

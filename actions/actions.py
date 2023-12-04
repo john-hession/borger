@@ -37,7 +37,7 @@ class CheckAvailability(Action):
         if tracker.get_slot('time') is None:
             return [SlotSet("next_slot_to_fill", 'time')]
         if tracker.get_slot('size') is None:
-            return [SlotSet("next_slot_to_fill", 'size')]
+            return [SlotSet("next_slot_to_fill", 'seats')]
         if tracker.get_slot('tabletype') is None:
             return [SlotSet("next_slot_to_fill", 'tabletype')]
 

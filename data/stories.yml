@@ -71,14 +71,14 @@ stories:
     - date: Next tuesday
   - action: action_check_availability
   - action: utter_ask_tabletype
-  - intent: table_type
+  - intent: inform
     entities:
     - tabletype: window
   - slot_was_set:
     - tabletype: window
   - action: action_check_availability
   - action: utter_ask_name
-  - intent: name_guest
+  - intent: inform
     entities:
     - name: Bob
   - slot_was_set:
@@ -87,7 +87,7 @@ stories:
   - action: utter_slot_values
   - intent: nlu_fallback
     entities:
-    - number_guests: one
+    - seats: one
   - intent: confirm
   - action: utter_goodbye
   - intent: goodbye
@@ -119,7 +119,6 @@ stories:
   - slot_was_set:
     - next_slot_to_fill: name
   - action: utter_ask_size
-  - intent: table_size
   - intent: inform
     entities:
     - seats: five
@@ -148,7 +147,6 @@ stories:
   - slot_was_set:
     - next_slot_to_fill: name
   - action: utter_ask_name
-  - intent: name_guest
   - intent: inform
     entities:
     - name: harold
@@ -207,3 +205,13 @@ stories:
   - intent: confirm
   - action: utter_success
   - action: utter_goodbye
+
+- story: cancel_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: faq_cancel
+  - action: utter_faq_cancel
+  - intent: deny
+  - intent: out_of_scope
+  - action: utter_out_of_scope
