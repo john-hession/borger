@@ -85,20 +85,16 @@ class ActionBookAppointment(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        # nr_tables_needed = get_nr_tables_needed(int(tracker.get_slot('number_guests')))
-
-        conn = sqlite3.connect('../sqlite/restaurant-20231203.db') 
+        conn = sqlite3.connect('../sqlite/restaurant-20231024.db') 
         cursor = conn.cursor()
 
         date_time_string = tracker.get_slot('date') + ' ' + tracker.get_slot('time')
         date_time_formatted = dateparser.parse(date_time_string).strftime("%m/%d/%Y, %H:%M:%S")
 
-        guests = int(tracker.get_slot('size'))
-        for t in range(1):
-            sql="INSERT INTO reservations (date, reserved_under, nr_guests) VALUES (?, ?, ?);"
-            cursor.execute(sql,(date_time_formatted, tracker.get_slot('name'), guests))
+        sql="INSERT INTO reservations (date, reserved_under, nr_guests) VALUES (?, ?, ?);"
+        cursor.execute(sql,(date_time_formatted, tracker.get_slot('name'), tracker.get_slot('name')))
             # Commit your changes in the database
-            conn.commit()
+        conn.commit()
 
         # Close connection
         conn.close()
