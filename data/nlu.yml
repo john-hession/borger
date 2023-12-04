@@ -78,14 +78,12 @@ nlu:
     - i'd like to book a table
     - [sam](name)
     - i would like to book a table
-    - i'd like to reserve a table for [two](number_guests)
-    - do you have a table for (four)[number_guests]
-    - [four](number_guests)
-    - [two](number_guests)
-    - [six](number_guests) people in total
-    - we'll be a party of [2](number_guests)
-    - we will be [three](number_guests)
-    - hi this is [eva](name). i would like to reserve a table for [one](number_guests)
+    - [four](seats)
+    - [two](seats)
+    - [six](seats) people in total
+    - we'll be a party of [2](seats)
+    - we will be [three](seats)
+    - hi this is [eva](name). i would like to reserve a table for [one](seats)
     - [milos](name)
     - [tess](name)
     - [maeve](name)
@@ -131,6 +129,50 @@ nlu:
     - [tomorrow](date) at [4](time) would be good
     - We'd like to be seated at the [bar](tabletype)
     - My name is [harold](name)
+    - [2](seats)
+    - [eight](seats)
+    - table for [one] (seats)
+    - table for [3] (seats) people
+    - [4](seats) people
+    - for [6](seats)
+    - is there availability for [1](seats)
+    - do you have a table for [2](seats)
+    - I would like a table for [3](seats)
+    - [2](seats) seats
+    - [7](seats)
+    - [two](seats) seats
+    - [5](seats) people
+    - [four](seats) people
+    - [4](seats) members
+    - [11](seats) peeps
+    - for a party of [9](seats)
+    - for a party of [three](seats)
+    - [3](seats) seats for a party
+    - [1](seats) seat
+    - [3](seats)
+    - [eight](seats) members
+    - [two](seats) ppl
+    - [4](seats)
+    - [6](seats)
+    - [5](seats)
+    - We have [six](seats) people
+    - We have [6](seats) people in our party
+    - [Bob](name)
+    - My name is [Mary](name)
+    - Booking for [Sam](name)
+    - I am [Ayush](name)
+    - [George](name) is my name
+    - The booking is for [Jake](name)
+    - Booking for [Quigs](name)
+    - [Jake](name)
+    - [Jefferson](name)
+    - I would like a [window](tabletype) table
+    - [inside](tabletype)
+    - [window](tabletype)
+    - Maybe a [bar](tabletype) seat?
+    - Is there a [window](tabletype) table?
+    - Is there a [bar](tabletype) table available?
+    - We'd like to have a [window](tabletype) table
 - intent: goodbye
   examples: |
     - cu
@@ -165,48 +207,6 @@ nlu:
     - don't like that
     - no way
     - not really
-- intent: name_guest
-  examples: |
-    - [Bob](name)
-    - My name is [Mary](name)
-    - Booking for [Sam](name)
-    - I am [Ayush](name)
-    - [George](name) is my name
-    - The booking is for [Jake](name)
-    - Booking for [Quigs](name)
-    - [Jake](name)
-- intent: table_size
-  examples: |
-    - [2](size)
-    - table for [3] (size) people
-    - [4](size) people
-    - for [6](size)
-    - is there availability for [1](size)
-    - do you have a table for [2](size)
-    - I would like a table for [3](size)
-    - [2](seats) seats
-    - [7](seats)
-    - [5](seats) people
-    - [4](seats) members
-    - [11](seats) peeps
-    - for a party of [9](seats)
-    - [3](seats) seats for a party
-    - [1](seats) seat
-    - [3](seats)
-    - [4](seats)
-    - [6](seats)
-    - [5](seats)
-    - We have six people
-    - We have [6](seats) people in our party
-- intent: table_type
-  examples: |
-    - I would like a [window](tabletype) table
-    - [indoor](tabletype)
-    - [outdoor](tabletype)
-    - Maybe a [bar](tabletype) seat?
-    - Is there a [window](tabletype) table?
-    - Is there a [corner](tabletype) table available?
-    - We'd like to have a [window](tabletype) table
 - intent: faq_days
   examples: |
     - What days are you open?

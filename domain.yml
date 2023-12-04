@@ -33,7 +33,7 @@ responses:
   - text: Take care, {name}!
   utter_iamabot:
   - text: I am a bot named SAM whose purpose is to help you book tables at Burg-Hein.
-  utter_ask_seats:
+  utter_ask_size:
   - text: For how many people?
   - text: What's your party's size?
   - text: How big is your party?
@@ -41,17 +41,14 @@ responses:
   - text: For how many guests?
   - text: How many people are you?
   utter_ask_time:
-  - text: When do you want your reservation?
+  - text: When do you want your reservation? Please state the day and time.
   - text: What day and time would you like to reserve a table?
   - text: When would you like to reserve for? Please state the day and time.
-  - text: What day and time?
+  - text: What day and time would you ike your resercation?
   utter_ask_tabletype:
-  - text: What type of table do you want?
-  - text: For how many guests?
-  - text: How many people are you?
-  - text: For how many people?
-  - text: What's your party's size?
-  - text: How big is your party?
+  - text: What type of table do you want? We have indoor, bar, and window seating.
+  - text: Would you like to have window, indoor, or bar seats?
+  - text: Is a window table, and indoor table, or bar seating best for you?
   utter_slot_values:
   - text: 'Just to confirm: You would like a table at Burg-hain for {seats} on {date}, {time}, under the name of {name}. Yes?'
   utter_out_of_scope:
