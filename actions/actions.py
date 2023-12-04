@@ -85,7 +85,7 @@ class ActionBookAppointment(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        conn = sqlite3.connect('../sqlite/restaurant-20231024.db') 
+        conn = sqlite3.connect('../sqlite/restaurant-20231023.db') 
         cursor = conn.cursor()
 
         date_time_string = tracker.get_slot('date') + ' ' + tracker.get_slot('time')
