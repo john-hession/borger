@@ -13,9 +13,8 @@ from rasa_sdk.executor import CollectingDispatcher
 
 import sqlite3
 import dateparser
-import math
 
-n_tables = 10
+n_tables = 14
 max_guests_per_table = 8
 
 # def get_nr_tables_needed(number_guests):
