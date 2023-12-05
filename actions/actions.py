@@ -84,8 +84,8 @@ class ActionBookAppointment(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-        conn = sqlite3.connect('../sqlite/restaurant-20231023.db') 
+        # change address to YOUR absolute path
+        conn = sqlite3.connect('/Users/jakehession/Desktop/borger/sqlite/restaurant-20231203.db') 
         cursor = conn.cursor()
 
         date_time_string = tracker.get_slot('date') + ' ' + tracker.get_slot('time')

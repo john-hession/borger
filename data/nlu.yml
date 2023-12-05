@@ -31,8 +31,14 @@ nlu:
     - Hi, I would like to book a table at [Burghain](name)
     - Book a table at [Burgain](name)
     - Can you book a table at [Burg-hain](name)
-    - I would like to make a reservation at [Berghain](name)
+    - I would like to make a reservation at [Berg-hain](name)
     - Make a reservation at [Burg-Hain](name)
+    - yes I want a table
+    - yes I want a reservation
+    - I want to make a res
+    - I want table
+    - make reservation
+    - yes get me a table
     - Book a table
     - I'd like to book a table
     - Make a reservation
@@ -243,11 +249,14 @@ nlu:
     - im mad
     - I dont want to book a table im mad
     - Ok I want to book a table
-    - [6](seats)
     - [friday](date) at [3pm](time)
     - I want a [window](tabletype) table
     - my name is [kenny](name)
     - thats right
+    - [5](seats)
+    - [5pm](time) [next wednesday](date)
+    - [window](tabletype)
+    - name is [carson](name)
 - intent: goodbye
   examples: |
     - cu

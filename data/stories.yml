@@ -263,7 +263,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: inform
+  - intent: out_of_scope
   - action: utter_out_of_scope
   - intent: out_of_scope
   - action: utter_out_of_scope
@@ -316,6 +316,47 @@ stories:
     - name: kenny
   - slot_was_set:
     - name: kenny
+  - action: action_book_appointment
+  - action: utter_slot_values
+  - intent: confirm
+  - action: utter_success
+  - action: utter_goodbye
+
+- story: interactive_story_6
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: inform
+  - action: action_check_availability
+  - action: utter_ask_size
+  - intent: inform
+    entities:
+    - seats: '5'
+  - slot_was_set:
+    - seats: '5'
+  - action: action_check_availability
+  - action: utter_ask_time
+  - intent: inform
+    entities:
+    - time: 5pm
+    - date: next wednesday
+  - slot_was_set:
+    - time: 5pm
+  - slot_was_set:
+    - date: next wednesday
+  - action: action_check_availability
+  - action: utter_ask_tabletype
+  - intent: inform
+    entities:
+    - tabletype: window
+  - slot_was_set:
+    - tabletype: window
+  - action: action_check_availability
+  - action: utter_ask_name
+  - intent: inform
+  - intent: inform
+    entities:
+    - name: carson
   - action: action_book_appointment
   - action: utter_slot_values
   - intent: confirm
