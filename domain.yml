@@ -50,12 +50,17 @@ responses:
   - text: Would you like to have window, indoor, or bar seats?
   - text: Is a window table, and indoor table, or bar seating best for you?
   utter_slot_values:
-  - text: 'Just to confirm: You would like a table at Burg-hain for {seats} on {date}, {time}, under the name of {name}.'
+  - text: 'Just to confirm: You would like a table at Burg-hain for {seats} {date}, {time}, under the name of {name}.'
   utter_out_of_scope:
-  - text: Sorry, I'm not sure I understand, would you like to book a table?
-  - text: I'm not sure I can do that for you, but I can help with booking a table.
-  - text: I only do table bookings, not whatever you're saying.
+  - text: Sorry, I'm not sure I understand, would you like to book a table? Call at +49-1234567890 if you want something else.
+  - text: I'm not sure I can do that for you, but I can help with booking a table. Call at +49-1234567890 to speak with someone who can help.
+  - text: I only do table bookings, not whatever you're saying. Call at +49-1234567890 for more info.
   - text: I can help if you want to book a table, otherwise call us at +49-1234567890 or just leave.
+  - text: Sorry, I can only help with table bookings, talk to someone else if you need something else. Call at +49-1234567890 for more info.
+  - text: If you want to book a table, I'm really good at that, but I can't really do anything else. Call at +49-1234567890 for more info.
+  - text: Please be more clear. Do you want a table. Call at +49-1234567890 for more info.
+  - text: I don't get it. Would you like to book a table? Call at +49-1234567890 for more info.
+  - text: Do you want a table or not? Call us at +49-1234567890 for more help.
   utter_faq_days:
   - text: Burg-Hain is open 24 hours a day 7 days a week
   utter_faq_cancel:
