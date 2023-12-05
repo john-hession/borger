@@ -1,0 +1,30 @@
+[
+  {
+    "name": "date",
+    "pattern": "(?:january|february|march|april|may|june|july|august|september|october|november|december) \\d+(?:st|nd|rd|th)"
+  },
+  {
+    "name": "date",
+    "pattern": "(?:next )?(?:monday|tuesday|wednesday|thursday|friday|saturday|sunday) *(?:in a week|next week| after next)"
+  },
+  {
+    "name": "date",
+    "pattern": "(?:one|two|three|four|five|six|seven|\\d) days from now"
+  },
+  {
+    "name": "date",
+    "pattern": "(?:today|tomorrow|day after tomorrow)"
+  },
+  {
+    "name": "date",
+    "pattern": "in (?:one|two|three|four|five|six|seven|\\d) days"
+  },
+  {
+    "name": "date",
+    "pattern": "on (?:monday|tuesday|wednesday|thursday|friday|saturday|sunday)"
+  },
+  {
+    "name": "time",
+    "pattern": "[\\d\\:]+(?: *[ap]m)?"
+  }
+]

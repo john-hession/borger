@@ -41,7 +41,7 @@ class CheckAvailability(Action):
         if tracker.get_slot('tabletype') is None:
             return [SlotSet("next_slot_to_fill", 'tabletype')]
 
-        conn = sqlite3.connect('../sqlite/restaurant-20231203.db') 
+        conn = sqlite3.connect('/Users/Ayush Jain/Documents/borger/sqlite/restaurant-20231203.db') 
         cursor = conn.cursor()
 
         sql = "SELECT * FROM reservations"
@@ -85,7 +85,7 @@ class ActionBookAppointment(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         # change address to YOUR absolute path
-        conn = sqlite3.connect('/Users/jakehession/Desktop/borger/sqlite/restaurant-20231203.db') 
+        conn = sqlite3.connect('/Users/Ayush Jain/Documents/borger/sqlite/restaurant-20231203.db') 
         cursor = conn.cursor()
 
         date_time_string = tracker.get_slot('date') + ' ' + tracker.get_slot('time')
