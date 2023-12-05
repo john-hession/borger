@@ -36,7 +36,7 @@ class CheckAvailability(Action):
             return [SlotSet("next_slot_to_fill", 'date')]
         if tracker.get_slot('time') is None:
             return [SlotSet("next_slot_to_fill", 'time')]
-        if tracker.get_slot('size') is None:
+        if tracker.get_slot('seats') is None:
             return [SlotSet("next_slot_to_fill", 'seats')]
         if tracker.get_slot('tabletype') is None:
             return [SlotSet("next_slot_to_fill", 'tabletype')]
@@ -51,7 +51,7 @@ class CheckAvailability(Action):
         tableavailable = False
         dt_get = dateparser.parse(tracker.get_slot('date') + ' ' + tracker.get_slot('time'))
         reserved_tables = 0
-        guests = int(tracker.get_slot('size'))
+        guests = int(tracker.get_slot('seats'))
 
         if guests > max_guests_per_table:
             print("Party size too big, sorry!")
