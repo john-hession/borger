@@ -10,7 +10,7 @@ intents:
 - out_of_scope
 responses:
   utter_greet:
-  - text: Hi, I'm Sam at Burg-Hain, would you like to make a reservation right now? We can take reservation sizes of up to 8 people, but we are not available to larger groups. \
+  - text: Hi, I'm Sam at Burg-Hain, would you like to make a reservation right now? We can take reservation sizes of up to 8 people, but we are not available to larger groups.
   utter_success:
   - text: Perfect! Your table has been reserved
   - text: Just reserved your table.
@@ -28,8 +28,8 @@ responses:
   - text: Can you give me a name for the reservation?
   utter_goodbye:
   - text: Goodbye, thanks for calling Burg-hain
-  - text: See you then, {name} - take care!
-  - text: Goodbye!
+  - text: See you then, {name} - have a nice day!
+  - text: Goodbye! Thanks so much for calling Burg-hain!
   - text: Take care, {name}!
   utter_iamabot:
   - text: I am a bot named SAM whose purpose is to help you book tables at Burg-Hein.
@@ -50,10 +50,12 @@ responses:
   - text: Would you like to have window, indoor, or bar seats?
   - text: Is a window table, and indoor table, or bar seating best for you?
   utter_slot_values:
-  - text: 'Just to confirm: You would like a table at Burg-hain for {seats} on {date}, {time}, under the name of {name}. Yes?'
+  - text: 'Just to confirm: You would like a table at Burg-hain for {seats} on {date}, {time}, under the name of {name}.'
   utter_out_of_scope:
   - text: Sorry, I'm not sure I understand, would you like to book a table?
-  - text: "I'm not sure I can do that for you, but I can help with "
+  - text: I'm not sure I can do that for you, but I can help with booking a table.
+  - text: I only do table bookings, not whatever you're saying.
+  - text: I can help if you want to book a table, otherwise call us at +49-1234567890 or just leave.
   utter_faq_days:
   - text: Burg-Hain is open 24 hours a day 7 days a week
   utter_faq_cancel:
@@ -121,9 +123,11 @@ slots:
     mappings:
     - type: custom
 actions:
+- utter_out_of_scope
+- utter_greet
+- utter_faq_cancel
 - utter_ask_tabletype
 - utter_success
-- utter_greet
 - action_book_appointment
 - utter_goodbye
 - utter_ask_time
@@ -131,12 +135,10 @@ actions:
 - utter_ask_name
 - utter_ask_size
 - action_check_availability
-- utter_out_of_scope
 - utter_failure
 - utter_did_that_help
 - utter_iamabot
 - utter_faq_days
-- utter_faq_cancel
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: false

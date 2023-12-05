@@ -24,6 +24,7 @@ nlu:
     - hi, this is [tin](name)
     - hi there
     - Hi ther
+    - whats up
 - intent: inform
   examples: |
     - Hello, I would like to book a table at [Burg-Hain](name)
@@ -235,6 +236,18 @@ nlu:
     - [Stella] (name)
     - [Sebastian] (name)
     - [Skylar] (name)
+    - Ok I want to reserve for [6](seats) people
+    - [wednesday](date) at [9pm](time)
+    - [indoor](tabletype) is good
+    - the name is [Chester](name)
+    - im mad
+    - I dont want to book a table im mad
+    - Ok I want to book a table
+    - [6](seats)
+    - [friday](date) at [3pm](time)
+    - I want a [window](tabletype) table
+    - my name is [kenny](name)
+    - thats right
 - intent: goodbye
   examples: |
     - cu
@@ -261,6 +274,7 @@ nlu:
     - Yep that's the one
     - yep
     - Yep I would
+    - yes this is correct
 - intent: deny
   examples: |
     - no
@@ -281,6 +295,7 @@ nlu:
     - Do you open on Saturday?
     - Is the restaurant open on Thursday?
     - Does the restaurant remain closed on Sunday?
+    - when is the restaurant open
 - intent: faq_cancel
   examples: |
     - How do I cancel a reservation.
@@ -333,6 +348,9 @@ nlu:
     - BOOOOOOO
     - burger burger bburger bbbburger
     - okay
+    - but I want to be mad not book a table
+    - okay im gonna stop talking to you then
+    - ok thats good when can I come
 - regex: date
   examples: |
     - (?:january|february|march|april|may|june|july|august|september|october|november|december) \d+(?:st|nd|rd|th)
