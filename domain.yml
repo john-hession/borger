@@ -44,7 +44,7 @@ responses:
   - text: When do you want your reservation? Please state the day and time.
   - text: What day and time would you like to reserve a table?
   - text: When would you like to reserve for? Please state the day and time.
-  - text: What day and time would you ike your resercation?
+  - text: What day and time would you like your reservation?
   utter_ask_tabletype:
   - text: What type of table do you want? We have indoor, bar, and window seating.
   - text: Would you like to have window, indoor, or bar seats?

@@ -41,7 +41,7 @@ class CheckAvailability(Action):
         if tracker.get_slot('tabletype') is None:
             return [SlotSet("next_slot_to_fill", 'tabletype')]
 
-        conn = sqlite3.connect('/Users/Ayush Jain/Documents/borger/sqlite/restaurant-20231203.db') 
+        conn = sqlite3.connect('/Users/jakehession/Desktop/borger/sqlite/restaurant-20231203.db') 
         cursor = conn.cursor()
 
         sql = "SELECT * FROM reservations"
@@ -85,14 +85,14 @@ class ActionBookAppointment(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         # change address to YOUR absolute path
-        conn = sqlite3.connect('/Users/Ayush Jain/Documents/borger/sqlite/restaurant-20231203.db') 
+        conn = sqlite3.connect('/Users/jakehession/Desktop/borger/sqlite/restaurant-20231203.db') 
         cursor = conn.cursor()
 
         date_time_string = tracker.get_slot('date') + ' ' + tracker.get_slot('time')
         date_time_formatted = dateparser.parse(date_time_string).strftime("%m/%d/%Y, %H:%M:%S")
-
-        sql="INSERT INTO reservations (date, reserved_under, nr_guests) VALUES (?, ?, ?);"
-        cursor.execute(sql,(date_time_formatted, tracker.get_slot('name'), tracker.get_slot('name')))
+        guests = int(tracker.get_slot('seats'))
+        sql="INSERT INTO reservations (date, reserved_under, nr_guests, table_type) VALUES (?, ?, ?, ?);"
+        cursor.execute(sql,(date_time_formatted, tracker.get_slot('name'), guests,tracker.get_slot('tabletype')))
             # Commit your changes in the database
         conn.commit()
 
