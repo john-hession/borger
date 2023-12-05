@@ -233,7 +233,48 @@ nlu:
     - [Aaliyah] (name)
     - [Max] (name)
     - [Aubrey] (name)
-    - Liam] (name)
+    - [Liam] (name)
+    - [Xander] (name)
+    - [Seraphina] (name)
+    - [Quentin] (name)
+    - [Olympia] (name)
+    - [Zephyr] (name)
+    - [Calista] (name)
+    - [Thorne] (name)
+    - [Aurelia] (name)
+    - [Cassius] (name)
+    - [Isolde] (name)
+    - [Rafferty] (name)
+    - [Lumina] (name)
+    - [Maximus] (name)
+    - [Astrid] (name)
+    - [Caspian] (name)
+    - [Elysia] (name)
+    - [Octavius] (name)
+    - [Marigold] (name)
+    - [Zephyrine] (name)
+    - [Kairos] (name)
+    - [Crystal] (name)
+    - [Zara] (name)
+    - [Kai] (name)
+    - [Aria] (name)
+    - [Ryder] (name)
+    - [Nova] (name)
+    - [Jaxon] (name)
+    - [Luna] (name)
+    - [Ezra] (name)
+    - [Soraya] (name)
+    - [Phoenix] (name)
+    - [Jasmine] (name)
+    - [Cairo] (name)
+    - [Axl] (name)
+    - [Serena] (name)
+    - [Atlas] (name)
+    - [Indigo] (name)
+    - [Ximena] (name)
+    - [Jett] (name)
+    - [Odessa] (name)
+    - [Bodhi] (name)
     - [Avery] (name)
     - [Camila] (name)
     - [Hannah] (name)
@@ -370,6 +411,32 @@ nlu:
     - but I want to be mad not book a table
     - okay im gonna stop talking to you then
     - ok thats good when can I come
+    - "Can you share information about unconventional ice cream flavors?"
+    - "Provide details on unique recipes for making standout pizzas."
+    - "Explain any unusual or creative dance moves inspired by food."
+    - "Tell me an interesting fact about the history of nachos."
+    - "Share a recipe for a standout guacamole that people might not know."
+    - "Is there any fun trivia about the origin of burgers?"
+    - "Can you provide information on the cultural significance of sushi?"
+    - "Tell me about any surprising sandwich combinations."
+    - "Share a unique milkshake recipe that stands out."
+    - "Is there any unusual tradition or celebration related to pancakes?"
+    - "Yo, what's the 411 on tacos doing the salsa in the flavor arena?"
+    - "Spill the tea on the secret sauce for turning nachos into a fiesta!"
+    - "Can you rap me the recipe for a bomb diggity guacamole, my friend?"
+    - "Tell me, if fries were a superhero, what would be their superpower?"
+    - "Give me the lowdown on burgers throwing shade – who's the beefiest?"
+    - "If pizza and sushi had a rap battle, who'd be dropping the tastiest rhymes?"
+    - "What's the gossip in the sandwich world? Who's stacking the freshest ingredients?"
+    - "If milkshakes had a dance-off, describe the winning move – is it a twirl or a shake?"
+    - "How many pancakes does it take to create a breakfast symphony? Spill the batter!"
+    - "Describe the sound of a burrito breaking it down – is it more salsa or hip-hop?"
+    - chill bitch
+    - fuckkkkkkkkkkkkkkkkkkkkkk
+    - bruh
+    - bruv be fucking fr
+    - ayo???
+    
 - regex: date
   examples: |
     - (?:january|february|march|april|may|june|july|august|september|october|november|december) \d+(?:st|nd|rd|th)
