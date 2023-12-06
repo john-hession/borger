@@ -10,6 +10,7 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.events import SlotSet
 from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk.events import SessionStarted, ActionExecuted
 
 import sqlite3
 import dateparser
@@ -100,3 +101,24 @@ class ActionBookAppointment(Action):
         conn.close()
 
         return []
+    
+
+class ActionSessionStart(Action):
+    def name(self) -> Text:
+        return "action_session_start"
+
+    async def run(
+      self, dispatcher, tracker: Tracker, domain: Dict[Text, Any]
+    ) -> List[Dict[Text, Any]]:
+
+        # the session should begin with a `session_started` event
+        events = [SessionStarted()]
+
+        # any slots that should be carried over should come after the
+        # `session_started` event
+
+        # an `action_listen` should be added at the end as a user message follows
+        events.append(ActionExecuted("utter_greet"))
+        events.append(ActionExecuted("action_listen"))
+
+        return events
