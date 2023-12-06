@@ -71,7 +71,6 @@ entities:
 - date
 - tabletype
 - name
-- tomorrow
 - avail
 slots:
   name:
@@ -129,13 +128,13 @@ slots:
     - type: custom
 actions:
 - action_check_availability
+- action_book_appointment
 - utter_ask_size
 - utter_faq_days
 - utter_ask_name
 - utter_ask_tabletype
 - utter_slot_values
 - utter_ask_time
-- action_book_appointment
 - utter_goodbye
 - utter_greet
 - utter_success

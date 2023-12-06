@@ -251,7 +251,6 @@ stories:
     - next_slot_to_fill: name
   - action: utter_ask_name
   - intent: inform
-  - intent: inform
     entities:
     - name: Chester
   - action: action_book_appointment
