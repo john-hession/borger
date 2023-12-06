@@ -233,7 +233,6 @@ nlu:
     - [Aaliyah] (name)
     - [Max] (name)
     - [Aubrey] (name)
-    - [Liam] (name)
     - [Xander] (name)
     - [Seraphina] (name)
     - [Quentin] (name)
@@ -257,7 +256,6 @@ nlu:
     - [Crystal] (name)
     - [Zara] (name)
     - [Kai] (name)
-    - [Aria] (name)
     - [Ryder] (name)
     - [Nova] (name)
     - [Jaxon] (name)
@@ -287,12 +285,36 @@ nlu:
     - [Olivia] (name)
     - [Mateo] (name)
     - [Nathan] (name)
-    - [Zoe] (name)
     - [Morgan] (name)
     - [Kryztof] (name)
     - [Carlos] (name)
     - [Gabriel] (name)
     - [Diego] (name)
+    - [Maria] (name)
+    - [Mohammed] (name)
+    - [Nushi] (name)
+    - [Jose] (name)
+    - [Mohammad] (name)
+    - [Ava] (name)
+    - [Juan] (name)
+    - [Luis] (name)
+    - [Fransisco] (name)
+    - [Hong] (name)
+    - [Hui] (name)
+    - [Ibrahim] (name)
+    - [Fatima] (name)
+    - [Xin] (name)
+    - [Pedro] (name)
+    - [Jorge] (name)
+    - [Yong] (name)
+    - [Sergey] (name)
+    - [Hassan] (name)
+    - [Anita] (name)
+    - [Manuel] (name)
+    - [Siti] (name)
+    - [Sandra] (name)
+    - [Emmanuel] (name)
+    - [Ling] (name)
     - Ok I want to reserve for [6](seats) people
     - [wednesday](date) at [9pm](time)
     - [indoor](tabletype) is good
@@ -304,10 +326,13 @@ nlu:
     - I want a [window](tabletype) table
     - my name is [kenny](name)
     - thats right
-    - [5](seats)
     - [5pm](time) [next wednesday](date)
-    - [window](tabletype)
     - name is [carson](name)
+    - ok thats cool, can I book a table
+    - [5](seats) people
+    - This [thursday](date) at [6pm](time) should be good
+    - a [window](tabletype) table would be good
+    - my name is [Carrie](name)
 - intent: goodbye
   examples: |
     - cu
@@ -335,6 +360,7 @@ nlu:
     - yep
     - Yep I would
     - yes this is correct
+    - Yep thats right
 - intent: deny
   examples: |
     - no
@@ -356,6 +382,20 @@ nlu:
     - Is the restaurant open on Thursday?
     - Does the restaurant remain closed on Sunday?
     - when is the restaurant open
+    - when are your hours
+    - Ok wait when are your hours again?
+    - So when is the restaurant open
+    - tell me your hours
+    - what are your hours?
+    - when are u open?
+    - are you open now?
+    - are you closed rn?
+    - when open?
+    - what hours do you have?
+    - what days
+    - what hours
+    - are you open
+    - when can I eat here?
 - intent: faq_cancel
   examples: |
     - How do I cancel a reservation.
@@ -371,6 +411,12 @@ nlu:
     - i want to cancel my booking
     - hey pls cancel my booking
     - pls cancel my booking
+    - can I cancel a reservation
+    - I want to cancel
+    - I have to cancel
+    - have to cancel reservation
+    - cancel my table
+    - cancel my res pls
     - I want to cancel my reservation
 - intent: out_of_scope
   examples: |
@@ -425,18 +471,17 @@ nlu:
     - "Spill the tea on the secret sauce for turning nachos into a fiesta!"
     - "Can you rap me the recipe for a bomb diggity guacamole, my friend?"
     - "Tell me, if fries were a superhero, what would be their superpower?"
-    - "Give me the lowdown on burgers throwing shade – who's the beefiest?"
+    - "Give me the lowdown on burgers throwing shade who's the beefiest?"
     - "If pizza and sushi had a rap battle, who'd be dropping the tastiest rhymes?"
     - "What's the gossip in the sandwich world? Who's stacking the freshest ingredients?"
-    - "If milkshakes had a dance-off, describe the winning move – is it a twirl or a shake?"
+    - "If milkshakes had a dance-off, describe the winning move is it a twirl or a shake?"
     - "How many pancakes does it take to create a breakfast symphony? Spill the batter!"
-    - "Describe the sound of a burrito breaking it down – is it more salsa or hip-hop?"
+    - "Describe the sound of a burrito breaking it down is it more salsa or hip-hop?"
     - chill bitch
     - fuckkkkkkkkkkkkkkkkkkkkkk
     - bruh
     - bruv be fucking fr
     - ayo???
-    
 - regex: date
   examples: |
     - (?:january|february|march|april|may|june|july|august|september|october|november|december) \d+(?:st|nd|rd|th)

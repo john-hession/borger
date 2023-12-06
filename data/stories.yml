@@ -113,6 +113,7 @@ stories:
 
 - story: interactive_story_2
   steps:
+  - intent: greet
   - action: utter_greet
   - intent: inform
   - action: action_check_availability
@@ -362,3 +363,50 @@ stories:
   - intent: confirm
   - action: utter_success
   - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: faq_days
+  - action: utter_faq_days
+  - intent: inform
+  - action: utter_ask_size
+  - intent: inform
+    entities:
+    - seats: '5'
+  - slot_was_set:
+    - seats: '5'
+  - action: action_check_availability
+  - action: utter_ask_time
+  - intent: inform
+    entities:
+    - date: thursday
+    - time: 6pm
+  - slot_was_set:
+    - time: 6pm
+  - slot_was_set:
+    - date: thursday
+  - action: action_check_availability
+  - action: utter_ask_tabletype
+  - intent: inform
+    entities:
+    - tabletype: window
+  - slot_was_set:
+    - tabletype: window
+  - action: action_check_availability
+  - slot_was_set:
+    - next_slot_to_fill: name
+  - action: utter_ask_name
+  - intent: inform
+    entities:
+    - name: Carrie
+  - slot_was_set:
+    - name: Carrie
+  - action: action_book_appointment
+  - action: utter_slot_values
+  - intent: confirm
+  - action: utter_success
+  - action: utter_goodbye
+  - intent: faq_days
+  - action: utter_faq_days

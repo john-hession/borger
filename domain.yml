@@ -66,9 +66,9 @@ responses:
   utter_faq_cancel:
   - text: To cancel a reservation, simply call us at +49-1234567890 and cancel your reservation.
 entities:
-- date
-- seats
 - time
+- seats
+- date
 - tabletype
 - name
 - tomorrow
@@ -128,18 +128,18 @@ slots:
     mappings:
     - type: custom
 actions:
-- action_book_appointment
-- utter_ask_name
-- utter_goodbye
 - action_check_availability
-- utter_ask_time
-- utter_slot_values
 - utter_ask_size
-- utter_greet
+- utter_faq_days
+- utter_ask_name
 - utter_ask_tabletype
+- utter_slot_values
+- utter_ask_time
+- action_book_appointment
+- utter_goodbye
+- utter_greet
 - utter_success
 - utter_out_of_scope
-- utter_faq_days
 - utter_faq_cancel
 - utter_failure
 - utter_did_that_help
